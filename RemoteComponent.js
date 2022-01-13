@@ -18,8 +18,12 @@ const loadingPromise = (remoteModule) =>
       reject(e);
     }
   });
-
-export const getModule = (remoteModule) => {
+/**
+ *
+ * @param {Object} remoteModule remote module config containing path, scope and module
+ * @return {Promise} promise that resolves to module
+ */
+export default function RemoteComponent(remoteModule) {
   window.remoteMFStore = window.remoteMFStore || {};
   const id = getRemoteModuleId(remoteModule);
   const existingModule = window.remoteMFStore[id];
@@ -28,13 +32,4 @@ export const getModule = (remoteModule) => {
   }
   window.remoteMFStore[id] = loadingPromise(remoteModule);
   return window.remoteMFStore[id];
-};
-
-/**
- *
- * @param {Object} remoteModule remote module config containing path, scope and module
- * @return {Promise} promise that resolves to module
- */
-export default function RemoteComponent(remoteModule) {
-  return getModule(remoteModule);
 }

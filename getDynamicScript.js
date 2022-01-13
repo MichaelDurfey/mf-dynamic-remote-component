@@ -4,7 +4,7 @@ import getRemoteModuleId from './utils/getRemoteModuleId';
  *
  * @param {Object} remoteModule contains the config with path to load the remote container
  * @summary Appends a dynamic script element pointing to the remote container
- * @return {Object} an Object containing ready and failed specifiers
+ * @return {Promise}
  */
 export default function getDynamicScript(remoteModule) {
   const id = getRemoteModuleId(remoteModule);
