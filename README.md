@@ -4,8 +4,6 @@
 <br>
 <br>
 
-Open source version: https://github.com/MichaelDurfey/mf-dynamic-remote-component
-
 ## Features
 
 - Keep remote modules in a cache on the window object
