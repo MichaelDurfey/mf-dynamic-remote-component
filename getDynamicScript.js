@@ -38,6 +38,7 @@ export default function getDynamicScript(remoteModule) {
     element.onerror = () => {
       // eslint-disable-next-line no-console
       console.error(`Dynamic Script Error: ${remoteModule.path}`);
+      reject(new Error(`Dynamic Script Error: ${remoteModule.path}`));
     };
   });
 }
