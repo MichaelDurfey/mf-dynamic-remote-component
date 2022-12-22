@@ -1,6 +1,6 @@
 {
   "name": "mf-dynamic-remote-component",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Library for loading in dynamic remote components when utilizing webpack Module Federation",
   "main": "public/main.js",
   "browser": "public/browser.js",
